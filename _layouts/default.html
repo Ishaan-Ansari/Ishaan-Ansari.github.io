@@ -11,7 +11,7 @@
 
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>{{ site.name }}</title>
+  <title>Ishaan Ansari</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
@@ -32,25 +32,25 @@
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h1>
-                Leonid Keselman
+                Ishaan Ansari
               </h1>
-              <p>I am a PhD student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, part of the <a href="https://www.scs.cmu.edu/">School of Computer Science</a> at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, where I work on 3D computer vision. My PhD advisor is <a href="http://www.cs.cmu.edu/~hebert/">Martial Hebert</a>.
+              <p>I am a Machine Learning Engineer at <a href="https://www.tftus.com/">Think Future Technologies Pvt. Ltd</a>, part of the <a href="https://www.tftus.com/ai-development">machine learning team</a>, Where I work at the intersection of computer vision and language modelling.
               </p>
               <p>
-                From 2011 to 2017, I worked at <a href="https://www.intel.com">Intel</a>, as part of <a href="https://www.intelrealsense.com/">Intel RealSense</a>. I primarily designed computer vision algorithms for efficient hardware ASICs, including the Intel RealSense <a href="https://software.intel.com/en-us/articles/realsense-r200-camera">R200</a> and <a href="https://software.intel.com/en-us/realsense/d400">D400</a> RGB-D sensors. Additionally, I worked on <a href="https://github.com/IntelRealSense/librealsense">software APIs</a>, <a href="https://patents.google.com/patent/US9992474B2">active illumination systems</a>, <a href="https://patents.google.com/patent/US9304597">human-computer interaction devices</a>, and helped develop demos for trade shows, including CES 2012-2016.
+                Before this, I graduated with a Bachelor's degree in Computer Science and Engineering with Honors from the <a href="https://jamiahamdard.edu/">Jamia Hamdard University, Delhi</a> in 2023. As an undergrad I worked in machine learning with a focus on computer vision in healthcare under the supervision of <a href="https://www.jamiahamdard.ac.in/facultyBio?id=709">Anam Saiyeda.</a>
               </p>
-              <p>
-                I have an MS in Computer Science (AI focus) from <a href="http://cs.stanford.edu">Stanford University</a>, where I was a research assistant for <a href="http://svl.stanford.edu/">Silvio Savarese</a> and a teaching assistant for <a href="http://svl.stanford.edu/">Fei-Fei Li</a> (<a href="http://vision.stanford.edu/teaching/cs131_fall1617/">CS131</a> & <a href="http://cs231n.stanford.edu/2017/">CS231N</a>). I have a BS in EECS from <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I worked in <a href="https://people.eecs.berkeley.edu/~pister/">Kris Pister's</a> lab.
-              </p>
+              My eventual goal is to help build AI that can reliably and autonomously perform complex tasks for extremely long periods of time, without human intervention.                Read below to learn more about my research interests and past work.              </p>
               <p style="text-align:center">
-                <a target="_blank" href="https://mailhide.io/e/B8TyS"> Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/leonidk">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=GCYG4GoAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/lkeselman"> LinkedIn </a>
+                <a href="mailto:mihansari.jh@gmail.com"> Email</a> &nbsp;/&nbsp;
+                <a href="https://github.com/Ishaan-ansari/">GitHub</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://twitter.com/iamihansari">Twitter</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/ishaanansari/"> LinkedIn </a> &nbsp;/&nbsp;
+                <a target="_blank" href="/pdfs/Ishaan_Ansari_ML_Engineer_2025_res3.pdf"> CV</a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/circle_bw_crop.jpg">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="/images/avatar.JPG">
             </td>
           </tr>
         </table>
@@ -60,8 +60,9 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Research</h2>
               <p>
-                I'm interested in computer vision, machine learning, optimization, graphics and robotics.
+                My research interests lie at the intersection of multimodal systems in vision and language domains, with a focus on enhancing reasoning and decision-making capabilities. I am particularly interested in addressing the challenges faced by large multi-modal models across discriminative, generative, and perceptual understanding tasks, especially in Out-Of-Distribution (OOD) and federated scenarios.
               </p>
+              <p>(* = equal contribution)</p>
             </td>
           </tr>
         </table>
@@ -117,8 +118,8 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Intel Projects</h2>
-              <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
+              <h2>Selected Projects</h2>
+              <p> I worked on problems in interpretability, with a focus on large language models and multimodal systems.
               </p>
             </td>
           </tr>
@@ -127,7 +128,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'Intel' %}
+          {% if cat == 'selected' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
@@ -194,7 +195,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat != 'research' and cat != 'Intel' %}
+          {% if cat != 'research' and cat != 'Intel' %} 
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
