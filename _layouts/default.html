@@ -130,15 +130,22 @@
               {% if cat == 'research' %}
               <tr>
                 <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-                  <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+                  {% if post.image %}
+                  <img src="{{ site.baseurl }}{{ post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+                  {% endif %}
                 </td>
                 <td style="padding:2.5%;width:75%;vertical-align:middle">
                   <h3>{{post.title}}</h3>
                   <br>
                   {{post.authors}}
                   <br>
-                  <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+                  <em style="background-color: rgba(104, 63, 186, 0.2); padding: 2px 4px; border-radius: 4px;">{{post.venue}}</em>, 
+                  {{ post.date | date: "%Y" }}
                   <br>
+                  {% if post.award %}
+                  <strong style="color: rgba(243, 63, 63, 0.82);">{{post.award}}</strong>
+                  <br>
+                  {% endif %}
                   {% if post.arxiv %}
                   <a href="{{post.arxiv}}">arxiv</a> /
                   {% endif %}

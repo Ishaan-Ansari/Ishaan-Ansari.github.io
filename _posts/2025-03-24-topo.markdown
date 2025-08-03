@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Hybrid visual embeddings for MLLM explainibilty to improve reasoning"
+date:   2025-03-01 12:00:00 +0530
+image: /images/test.png
+categories: research
+authors: "Rohan Mehta, Karuna K Chandra, <strong>Ishaan Ansari</strong>, Aarav Nambiar, Jashn Arora, Manish Jain, Devika Raghvan"
+venue: "BeyondFacts Workshop at ACM Web Conference"
+code: https://github.com/Ishaan-ansari/
+arxiv: https://arxiv.org/abs/1706.03762
+award: "Best Paper Award"
+---
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
