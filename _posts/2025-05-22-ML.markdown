@@ -4,7 +4,8 @@ title:  "Machine Learning algorithms"
 date:   2023-06-22 18:08:39 +00:00
 image: /images/gina-motes.jpg
 categories: self
-course: " paced"
+image: /images/4_ml_map.png
+code: https://github.com/Ishaan-Ansari/ML-from-scratch
 author: "Ishaan Ansari"
 subtitle: "Classic deep learning architectures from scratch."
 ---

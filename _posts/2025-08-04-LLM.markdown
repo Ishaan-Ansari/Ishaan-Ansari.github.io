@@ -2,9 +2,9 @@
 layout: post
 title:  "LLMs from scratch"
 date:   2023-06-22 18:08:39 +00:00
-image: /images/gina-motes.jpg
+image: /images/6_LLM.jpg
 categories: self
-course: " paced"
+code: https://github.com/Ishaan-Ansari/LLM-from-scratch
 author: "Ishaan Ansari"
 subtitle: "Classic deep learning architectures from scratch."
 ---

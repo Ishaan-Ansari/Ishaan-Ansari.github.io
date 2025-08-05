@@ -2,9 +2,9 @@
 layout: post
 title:  "AB Testing"
 date:   2023-06-22 18:08:39 +00:00
-image: /images/gina-motes.jpg
+image: /images/7_AB.webp
 categories: self
-course: " paced"
+code: https://github.com/Ishaan-Ansari/AB-Test 
 author: "Ishaan Ansari"
 subtitle: "Classic deep learning architectures from scratch."
 ---

@@ -2,9 +2,9 @@
 layout: post
 title:  "Fine tuning LLMs"
 date:   2023-06-22 18:08:39 +00:00
-image: /images/gina-motes.jpg
+image: /images/5_finetuning.png
 categories: self
-course: " paced"
+code: https://github.com/Ishaan-Ansari/Finetuning-LLMs
 author: "Ishaan Ansari"
 subtitle: "Classic deep learning architectures from scratch."
 ---

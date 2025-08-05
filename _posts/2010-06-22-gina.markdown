@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "History of Deep Learning"
-date:   2023-06-22 18:08:39 +00:00
-image: /images/gina-motes.jpg
+image: /images/1_DL.png
+code: https://github.com/Ishaan-Ansari/Deep-Learning-from-scratch 
 categories: self
-course: " paced"
 author: "Ishaan Ansari"
 subtitle: "Classic deep learning architectures from scratch."
 ---
