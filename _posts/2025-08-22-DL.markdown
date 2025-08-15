@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "History of Deep Learning"
+date:   2024-06-22 18:08:39 +00:00
+image: /images/1_DL.png
+code: https://github.com/Ishaan-Ansari/Deep-Learning-from-scratch 
+categories: self
+author: "Ishaan Ansari"
+subtitle: "Classic deep learning architectures from scratch."
+---
+It's an ongoing project where I implement fundamental deep learning architectures from scratch.
+
