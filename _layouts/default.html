@@ -122,7 +122,7 @@
               <p>
                 My research interests lie at the intersection of multimodal systems in vision and language domains, with a focus on enhancing reasoning and decision-making capabilities. I am particularly interested in addressing the challenges faced by large multi-modal models across discriminative, generative, and perceptual understanding tasks, especially in Out-Of-Distribution (OOD) and federated scenarios.
               </p>
-              <p>(* = equal contribution)</p>
+              <p>(* = equal contribution, † indicates my role as mentor)</p>
                 </td>
               </tr>
             </table>
@@ -198,14 +198,10 @@
           {% if cat == 'selected' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="{{ site.baseurl }}{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
 
               <br>
               {% if post.website %}
