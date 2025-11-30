@@ -1,29 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TensorTales • ML Primer</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorTales</title>
+    <meta name="description" content="A professional blog covering machine learning, data science, and cutting-edge technology trends.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Resources</a></li>
-      </ul>
-    </nav>
-  </header> -->
-  <main>
-    <!-- content goes here -->
-  </main>
-  <footer>
-    <p>&copy; 2025 <i> TensorTales </i> </p>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="#home" class="nav__logo">TechInsights</a>
+            </div>
+            
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#blog" class="nav__link">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">TensorTales</h1>
+                    <p class="hero__subtitle">AI research, concepts & Modern Development</p>
+                    <p class="hero__description">Machine Learning Engineer with expertise in AI/Data Science. Currently pursuing advanced studies in Germany, passionate about cutting-edge ML research and practical applications.</p>
+                    <div class="hero__actions">
+                        <a href="#blog" class="btn btn--primary">Read Latest Posts</a>
+                        <a href="#about" class="btn btn--outline">Learn More About Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Posts Section -->
+        <section class="featured-posts" id="blog">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Featured Posts</h2>
+                    <p class="section__description">Latest insights on machine learning, data science, and modern development</p>
+                </div>
+                
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-card__image">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop" alt="Transformer Architecture" loading="lazy">
+                        </div>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">Machine Learning</span>
+                                <time class="post-card__date" datetime="2025-01-15">Jan 15, 2025</time>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#post1">Understanding Transformer Architecture in Modern NLP</a>
+                            </h3>
+                            <p class="post-card__excerpt">A deep dive into the architecture that revolutionized natural language processing and the foundation of models like GPT and BERT.</p>
+                            <div class="post-card__footer">
+                                <span class="post-card__read-time">8 min read</span>
+                                <div class="post-card__tags">
+                                    <span class="tag">NLP</span>
+                                    <span class="tag">Transformers</span>
+                                    <span class="tag">Deep Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card__image">
+                            <img src="https://images.unsplash.com/photo-1518186233392-c232efbf2373?w=400&h=250&fit=crop" alt="Apache Kafka" loading="lazy">
+                        </div>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">Data Engineering</span>
+                                <time class="post-card__date" datetime="2025-01-12">Jan 12, 2025</time>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#post2">Building Scalable Data Pipelines with Apache Kafka</a>
+                            </h3>
+                            <p class="post-card__excerpt">Learn how to design and implement robust data streaming architectures for real-time analytics and processing.</p>
+                            <div class="post-card__footer">
+                                <span class="post-card__read-time">12 min read</span>
+                                <div class="post-card__tags">
+                                    <span class="tag">Kafka</span>
+                                    <span class="tag">Data Streaming</span>
+                                    <span class="tag">Architecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card__image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Bayesian Statistics" loading="lazy">
+                        </div>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">Statistics</span>
+                                <time class="post-card__date" datetime="2025-01-10">Jan 10, 2025</time>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#post3">Bayesian Statistics in Machine Learning: A Practical Guide</a>
+                            </h3>
+                            <p class="post-card__excerpt">Explore probabilistic approaches to ML and how Bayesian methods can improve model uncertainty and decision making.</p>
+                            <div class="post-card__footer">
+                                <span class="post-card__read-time">15 min read</span>
+                                <div class="post-card__tags">
+                                    <span class="tag">Bayesian</span>
+                                    <span class="tag">Statistics</span>
+                                    <span class="tag">Probability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card__image">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop" alt="Edge Computing" loading="lazy">
+                        </div>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">AI</span>
+                                <time class="post-card__date" datetime="2025-01-08">Jan 8, 2025</time>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#post4">Optimizing Neural Networks for Edge Computing</a>
+                            </h3>
+                            <p class="post-card__excerpt">Techniques for model compression and optimization to deploy AI models on resource-constrained devices.</p>
+                            <div class="post-card__footer">
+                                <span class="post-card__read-time">10 min read</span>
+                                <div class="post-card__tags">
+                                    <span class="tag">Edge Computing</span>
+                                    <span class="tag">Optimization</span>
+                                    <span class="tag">Neural Networks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card__image">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop" alt="React Components" loading="lazy">
+                        </div>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">Web Development</span>
+                                <time class="post-card__date" datetime="2025-01-05">Jan 5, 2025</time>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#post5">Modern Web Development: React Server Components</a>
+                            </h3>
+                            <p class="post-card__excerpt">Understanding the latest React paradigm for server-side rendering and its impact on web application performance.</p>
+                            <div class="post-card__footer">
+                                <span class="post-card__read-time">7 min read</span>
+                                <div class="post-card__tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">SSR</span>
+                                    <span class="tag">Web Performance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card__image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop" alt="Distributed Systems" loading="lazy">
+                        </div>
+                        <div class="post-card__content">
+                            <div class="post-card__meta">
+                                <span class="post-card__category">MLOps</span>
+                                <time class="post-card__date" datetime="2025-01-02">Jan 2, 2025</time>
+                            </div>
+                            <h3 class="post-card__title">
+                                <a href="#post6">Distributed Systems Design Patterns for ML Operations</a>
+                            </h3>
+                            <p class="post-card__excerpt">Essential patterns for building resilient and scalable machine learning systems in production environments.</p>
+                            <div class="post-card__footer">
+                                <span class="post-card__read-time">13 min read</span>
+                                <div class="post-card__tags">
+                                    <span class="tag">MLOps</span>
+                                    <span class="tag">Distributed Systems</span>
+                                    <span class="tag">Design Patterns</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section__footer">
+                    <a href="#all-posts" class="btn btn--outline">View All Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2 class="about__title">About Me</h2>
+                        <p class="about__description">Machine Learning Engineer with expertise in AI/Data Science. Currently pursuing advanced studies in Germany, passionate about cutting-edge ML research and practical applications.</p>
+                        <p>I focus on practical implementations of machine learning algorithms, data engineering pipelines, and modern web development practices. My goal is to bridge the gap between theoretical research and real-world applications.</p>
+                        
+                        <div class="about__expertise">
+                            <h3>Areas of Expertise</h3>
+                            <div class="expertise-tags">
+                                <span class="expertise-tag">Machine Learning</span>
+                                <span class="expertise-tag">Data Science</span>
+                                <span class="expertise-tag">Web Development</span>
+                                <span class="expertise-tag">AI Research</span>
+                                <span class="expertise-tag">Statistics</span>
+                                <span class="expertise-tag">MLOps</span>
+                                <span class="expertise-tag">Data Engineering</span>
+                            </div>
+                        </div>
+
+                        <div class="about__social">
+                            <h3>Connect With Me</h3>
+                            <div class="social-links">
+                                <a href="#" target="_blank" aria-label="GitHub" class="social-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" aria-label="LinkedIn" class="social-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Twitter" class="social-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Email" class="social-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h3.819l6.545 4.91 6.545-4.91h3.819A1.636 1.636 0 0 1 24 5.457z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__brand">TechInsights Blog</h3>
+                    <p class="footer__description">Exploring AI, Data Science & Modern Development</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__title">Quick Links</h4>
+                        <ul class="footer__list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__title">Categories</h4>
+                        <ul class="footer__list">
+                            <li><a href="#machine-learning">Machine Learning</a></li>
+                            <li><a href="#data-science">Data Science</a></li>
+                            <li><a href="#web-development">Web Development</a></li>
+                            <li><a href="#ai-research">AI Research</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__title">Legal</h4>
+                        <ul class="footer__list">
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#rss" target="_blank">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__newsletter">
+                    <h4 class="footer__title">Newsletter</h4>
+                    <p>Stay updated with the latest insights</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2025 TechInsights Blog. All rights reserved.
+                </p>
+                <div class="footer__social">
+                    <a href="#" target="_blank" aria-label="GitHub" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Twitter" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
-
-
