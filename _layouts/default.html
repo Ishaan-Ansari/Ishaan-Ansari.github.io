@@ -59,6 +59,7 @@
         
         .tab-content {
           display: none;
+          animation: fadeOut 0.3s ease-out;
         }
         
         .tab-content.active {
@@ -70,6 +71,65 @@
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Blog post styling */
+        .blog-post {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        }
+        
+        .blog-post:last-child {
+        border-bottom: none;
+        }
+        
+        .blog-post:hover {
+        background-color: #fafafa;
+        padding: 15px;
+        border-radius: 8px;
+        margin: -15px;
+        margin-bottom: 5px;
+        }
+        
+        .blog-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.4;
+        }
+        
+        .blog-title a:hover {
+        color: #9370db !important;
+        transition: color 0.3s ease;
+        }
+        
+        .blog-date {
+        color: #666;
+        font-size: 14px;
+        margin: 5px 0;
+        font-style: italic;
+        }
+        
+        .blog-excerpt {
+        margin: 12px 0;
+        line-height: 1.6;
+        color: #444;
+        }
+        
+        .blog-link {
+        color:  #4073ad;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        }
+        
+        .blog-link:hover {
+        color: #7a52cc;
+        text-decoration: underline;
+        }
+
     </style>
 
 </head>
@@ -95,10 +155,10 @@
                             <p style="text-align:center">
                                 <a href="mailto:mihansari.jh@gmail.com"> Email</a> &nbsp;/&nbsp;
                                 <a href="https://github.com/Ishaan-ansari/">GitHub</a> &nbsp;/&nbsp;
-                                <a href="https://scholar.google.com/">Google Scholar</a> &nbsp;/&nbsp;
+                                <!-- <a href="https://scholar.google.com/">Google Scholar</a> &nbsp;/&nbsp; -->
                                 <a href="https://twitter.com/iamihansari">Twitter</a> &nbsp;/&nbsp;
                                 <a href="https://www.linkedin.com/in/ishaanansari/"> LinkedIn </a> &nbsp;/&nbsp;
-                                <a target="_blank" href="/pdfs/Ishaan_Ansari_ML_Engineer_2025_V4.pdf"> CV</a>
+                                <a target="_blank" href="/pdfs/Ishaan_Ansari_ML_Engineer_2026_V4.pdf"> Curriculum Vitae </a>
                             </p>
                         </td>
                         <td style="padding:2.5%;width:40%;max-width:40%">
@@ -110,19 +170,18 @@
                 <div class="tabs">
                     <!-- Tab Headers -->
                     <div class="tab-headers">
-                        <button class="tab-header active" onclick="switchTab(event, 'research')">Research</button>
+                        <!-- <button class="tab-header active" onclick="switchTab(event, 'research')">Research</button> -->
+                        <button class="tab-header" onclick="switchTab(event, 'other')">Explorations</button>
                         <button class="tab-header" onclick="switchTab(event, 'Selected')">Selected Projects</button>
-                        <button class="tab-header" onclick="switchTab(event, 'other')">Other Projects</button>
-                        <!-- <button class="tab-header" onclick="switchTab(event, 'TensorTales')">TensorTales</button> -->
+                        <button class="tab-header" onclick="switchTab(event, 'blogs')">Blog</button>
                         <button class="tab-header" onclick="switchTab(event, 'Community')">Community</button>
                     </div>
 
                     <!-- Research Tab Content -->
-                    <div id="research" class="tab-content active">
+                    <!-- <div id="research" class="tab-content active">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                <td style="padding:2.5%;width:100%;vertical-align:middle">
-                                    <h2>Research</h2>
+                                <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
                                     <p>
                                         My research interests lie at the intersection of multimodal systems in vision and language domains, with a focus on enhancing reasoning and decision-making capabilities. I am particularly interested in addressing the challenges faced by large multi-modal
                                         models across discriminative, generative, and perceptual understanding tasks, especially in Out-Of-Distribution (OOD) and federated scenarios.
@@ -159,16 +218,15 @@
                             </tr>
                             {% endif %} {% endfor %} {% endfor %}
                         </table>
-                    </div>
+                    </div> -->
 
 
                     <!-- Selected Projects Tab Content -->
                     <div id="Selected" class="tab-content">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                <td style="padding:2.5%;width:100%;vertical-align:middle">
-                                    <h2>Selected Projects</h2>
-                                    <p> I worked on problems in interpretability, with a focus on large language models and multimodal systems.
+                                <td style="padding:0%;width:100%;vertical-align:middle">
+                                    <p> I work on problems related to interpretability, with a focus on large language models and multimodal systems.
                                     </p>
                                 </td>
                             </tr>
@@ -203,19 +261,18 @@
                     </div>
 
                     <!-- Other Projects Tab Content -->
-                    <div id="other" class="tab-content">
+                    <div id="other" class="tab-content active">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                <td style="padding:2.5%;width:100%;vertical-align:middle">
-                                    <h2>Other Projects</h2>
-                                    <p> These include coursework, side projects and unpublished research work.
+                                <td style="padding:0%;width:100%;vertical-align:middle">
+                                    <p> These include experiments, prototypes, or learning-oriented work.
                                     </p>
                                 </td>
                             </tr>
                         </table>
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-                            {% for post in site.posts %} {% for cat in post.categories %} {% if cat != 'research' and cat != 'selected' %}
+                            {% for post in site.posts %} {% for cat in post.categories %} {% if cat != 'research' and cat != 'selected'  and cat != 'blog' %}
                             <tr>
                                 <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
                                     {% if post.image %}
@@ -241,32 +298,41 @@
                         </table>
                     </div>
 
-                    <!-- Tensor tales Tab Content -->
-                    <div id="TensorTales" class="tab-content">
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tr>
-                                <td style="padding:2.5%;width:100%;vertical-align:middle">
-                                    <h2><i>TensorTales</i></h2>
-                                    <p> I started this project as a way to document and share my learnings. The goal of <i>TensorTales</i> is to make machine learning more intuitive for everyone.</p>
-
-                                    <!-- Machine Learning topic + subtopics -->
-                                    <section class="topics" aria-labelledby="ml-heading" style="margin-top:1.5rem;">
-                                        <li><h3 id="ml-heading"> <a href="/primers/ml_primer.html" target="_blank" rel="noopener noreferrer">Machine Learning primer</a></h3></li>
-                                        <li><h3 id="ml-heading"> <a href="/primers/dl_primer.html" target="_blank" rel="noopener noreferrer">Deep learning algorithms</a></h3></li>
-                                        <li><h3 id="ml-heading"> <a href="/primers/llm.html" target="_blank" rel="noopener noreferrer">LLMs Roadmap </a></h3></li>
-
-                                   
-                                    <p> I'm continuously adding more content, so stay tuned for updates! If you have any suggestions or topics you'd like me to cover, feel free to reach out.
-
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
+                <!-- Blogs Tab Content -->
+                <div id="blogs" class="tab-content">
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                    <tr>
+                        <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                        <p>
+                            I like sharing my thoughts on a variety of topics on my <a href="https://substack.com/@kerneleye">Substack blog</a>. Below are all my blog posts.
+                        </p>
+                        </td>
+                    </tr>
+                    </table>
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                    {% for post in site.posts %}
+                    {% for cat in post.categories %}
+                    {% if cat == 'blog' %}
+                    <tr>
+                        <td style="padding:2.5%;width:100%;vertical-align:middle">
+                        <div class="blog-post">
+                            <div class="blog-title">
+                            <a href="{{post.link}}" target="_blank" style="text-decoration: none; color: #2c3e50;">{{post.title}}</a>
+                            </div>
+                            <div class="blog-date">{{ post.date | date: "%B %d, %Y" }}</div>
+                            <div class="blog-excerpt">{{ post.excerpt }}</div>
+                            <a href="{{post.link}}" target="_blank" class="nav__link">Read on Substack →</a>
+                        </div>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                    </table>
+                </div>
+                </div>
                     <!-- Community tab -->
                     <div id="Community" class="tab-content">
-                        <h2>Community</h2>
                         <p> I am actively mentoring undergraduate and master’s students in LLMs and Vision, and I look forward to supporting more learners. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
                             and development. If you are interested, send an introductory email that includes:</p>
                         <!-- Example static item -->
