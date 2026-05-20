@@ -36,12 +36,13 @@
         }
         
         .tab-header {
+          font-family: var(--font-heading);
           padding: 12px 24px;
           cursor: pointer;
           background: none;
           border: none;
-          font-size: 16px;
-          font-weight: 600;
+          font-size: 22px;
+          font-weight: normal;
           color: #666;
           transition: all 0.3s ease;
           border-bottom: 3px solid transparent;
@@ -174,6 +175,7 @@
                         <button class="tab-header" onclick="switchTab(event, 'other')">Explorations</button>
                         <button class="tab-header" onclick="switchTab(event, 'Selected')">Selected Projects</button>
                         <button class="tab-header" onclick="switchTab(event, 'blogs')">Blog</button>
+                        <button class="tab-header" onclick="switchTab(event, 'Bookshelf')">Bookshelf</button>
                         <button class="tab-header" onclick="switchTab(event, 'Community')">Community</button>
                     </div>
 
@@ -330,19 +332,60 @@
                     {% endfor %}
                     </table>
                 </div>
+
+
+                <div id="Bookshelf" class="tab-content">
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tr>
+                            <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                                
+                                <p style="color: #666; margin-bottom: 50px;">Books that shaped how I think</p>
+
+                                <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #a3a3a3; font-weight: 600; margin-bottom: 20px;">Currently Reading</p>
+                                <p style="font-size: 18px; margin-bottom: 50px;">
+                                    <span style="font-style: italic; color: #333;">Isles of the Emberdark</span> <span style="color: #a3a3a3;">&mdash; Brandon Sanderson</span>
+                                </p>
+
+                                <h3 style="font-size: 24px; margin-bottom: 30px; font-weight: normal; display: block;">Books</h3>
+                                
+                                <p style="font-size: 18px; margin-bottom: 25px;">
+                                    <span style="font-style: italic; color: #333;">Oathbringer</span> <span style="color: #a3a3a3;">&mdash; Brandon Sanderson</span>
+                                </p>
+                                <p style="font-size: 18px; margin-bottom: 25px;">
+                                    <span style="font-style: italic; color: #333;">Project Hail Mary</span> <span style="color: #a3a3a3;">&mdash; Andy Weir</span>
+                                </p>
+                                <p style="font-size: 18px; margin-bottom: 25px;">
+                                    <span style="font-style: italic; color: #333;">The Final Empire</span> <span style="color: #a3a3a3;">&mdash; Brandon Sanderson</span>
+                                </p>
+                                <p style="font-size: 18px; margin-bottom: 25px;">
+                                    <span style="font-style: italic; color: #333;">The Odyssey</span> <span style="color: #a3a3a3;">&mdash; Homer</span>
+                                </p>
+                                <p style="font-size: 18px; margin-bottom: 25px;">
+                                    <span style="font-style: italic; color: #333;">Fountainhead</span> <span style="color: #a3a3a3;">&mdash; Ayn Rand</span>
+                                </p>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>                
+
                 </div>
                     <!-- Community tab -->
                     <div id="Community" class="tab-content">
-                        <p> I am actively mentoring undergraduate and master’s students in LLMs and Vision, and I look forward to supporting more learners. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
-                            and development. If you are interested, send an introductory email that includes:</p>
-                        <!-- Example static item -->
-                        <ul>
-                            <li>A brief introduction about yourself.</li>
-                            <li>Your academic background and areas of interest.</li>
-                            <li>Your CV (optional but preferred).</li>
-                        </ul>
+                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                            <tr>
+                                <td style="padding:2.5%;width:100%;vertical-align:middle">
+                                    <p> I am actively mentoring undergraduate and master’s students in LLMs and Vision, and I look forward to supporting more learners. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
+                                        and development. If you are interested, send an introductory email that includes:</p>
+                                    <ul>
+                                        <li>A brief introduction about yourself.</li>
+                                        <li>Your academic background and areas of interest.</li>
+                                        <li>Your CV (optional but preferred).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-
 
                     <script>
                         function switchTab(evt, tabName) {
@@ -370,7 +413,7 @@
                             <td style="padding:0px">
                                 <br>
                                 <p style="text-align:center;font-size:small;">
-                                    This site adapts design elements from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+                                    "Panthi hoon main us path ka, jiski koi manzil nahi. Dharti par aakash jhuka hai, jahan koi saahil nahi..." - <em style="color: rgba(63, 81, 186, 0.8);">Kishore Kumar</em>
                                 </p>
                             </td>
                         </tr>
