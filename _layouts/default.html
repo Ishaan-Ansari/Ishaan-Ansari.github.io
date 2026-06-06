@@ -131,6 +131,119 @@
         text-decoration: underline;
         }
 
+        /* Services section */
+        .services-intro {
+            font-size: 18px;
+            line-height: 1.75;
+            color: #333;
+            margin-bottom: 48px;
+            max-width: 580px;
+        }
+
+        .services-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #b0b0b0;
+            font-weight: 600;
+            margin-bottom: 22px;
+            margin-top: 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 48px;
+            margin-bottom: 8px;
+        }
+
+        .service-item {
+            padding: 22px 0;
+            border-top: 1px solid #ebebeb;
+        }
+
+        .service-item h3 {
+            display: block;
+            font-size: 17px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-weight: normal;
+            font-family: var(--font-heading);
+        }
+
+        .service-item p {
+            color: #555;
+            margin: 0;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 4px;
+        }
+
+        .engagement-item {
+            padding: 18px 20px;
+            background: #f8f8f8;
+            border-radius: 5px;
+            border-left: 2.5px solid #3498db;
+        }
+
+        .engagement-item .eng-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0 0 6px 0;
+            font-family: var(--font-body);
+        }
+
+        .engagement-item p {
+            color: #666;
+            margin: 0;
+            line-height: 1.65;
+            font-size: 15px;
+        }
+
+        .services-cta-row {
+            margin-top: 48px;
+            padding-top: 28px;
+            border-top: 1px solid #ebebeb;
+        }
+
+        .services-cta-row p {
+            margin: 0 0 16px 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .service-cta-btn {
+            display: inline-block;
+            padding: 10px 26px;
+            background: #2c3e50;
+            color: #fff !important;
+            text-decoration: none !important;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            transition: background 0.2s ease;
+        }
+
+        .service-cta-btn:hover {
+            background: #1772d0 !important;
+            color: #fff !important;
+        }
+
+        @media (max-width: 580px) {
+            .service-grid,
+            .engagement-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 
 </head>
@@ -175,8 +288,8 @@
                         <button class="tab-header active" onclick="switchTab(event, 'case-studies')">Case Studies</button>
                         <button class="tab-header" onclick="switchTab(event, 'blogs')">Writing</button>
                         <button class="tab-header" onclick="switchTab(event, 'Bookshelf')">Bookshelf</button>
-                        <button class="tab-header" onclick="switchTab(event, 'Services')">Services</button>
-                        <button class="tab-header" onclick="switchTab(event, 'Mentorship')">Mentorship</button>
+                        <button class="tab-header" onclick="switchTab(event, 'Services')">Collaboration</button>
+                        <!-- <button class="tab-header" onclick="switchTab(event, 'Mentorship')">Mentorship</button> -->
                     </div>
 
                     <!-- Research Tab Content -->
@@ -338,21 +451,72 @@
                 <div id="Services" class="tab-content">
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tr>
-                                <p> Need someone to architect retrieval, build LLM systems, and write the evals pipeline? Bring me in for focused sprints or long-haul collaborations. </p>
+                            <td style="padding:2.5%;width:100%;vertical-align:middle">
+
+                                <p style="color: #666; margin-bottom: 50px;">
+                                    Need someone to architect retrieval, build LLM systems, and write the evals pipeline? 
+                                    Bring me in for focused sprints or long-haul collaborations.
+                                </p>
+
+                                <!-- What I do -->
+                                <p class="services-label">What I Do</p>
+
+                                <div class="service-grid">
+                                    <div class="service-item">
+                                        <h3>RAG &amp; Agentic Systems</h3>
+                                        <p>Implementation of production-grade retrieval pipelines and autonomous agent architectures that can reason over data, call tools, and execute business workflows with human oversight that actually move the needle on precision.</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <h3>LLM Infrastructure</h3>
+                                        <p>Production-grade infrastructure for LLM applications. I design the backend layer that keeps AI products reliable, observable, secure, and cost-aware as usage grows.</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <h3>Content Creation &amp; Technical Documentation</h3>
+                                        <p>I write about the technical substrate: Educating developer communities and enterprise teams by translating complex AI concepts into actionable knowledge through tutorials, whitepapers, and documentation.</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <h3>MLOps & ML Pipelines</h3>
+                                        <p>From raw data to production inference. I architect end-to-end MLOps pipelines that ensure your models perform reliably at scale with complete reproducibility and monitoring.</p>
+                                    </div>
+                                </div>
+                
+
+                                <!-- How I work -->
+                                <p class="services-label" style="margin-top: 50px;">How I Work</p>
+
+                                <div class="engagement-grid">
+                                    <div class="engagement-item">
+                                        <p class="eng-title">Focused Sprint</p>
+                                        <p>1–4 weeks. A scoped problem, a clear deliverable. Good for architecture reviews, PoC builds, and debugging hairy production issues fast.</p>
+                                    </div>
+                                    <div class="engagement-item">
+                                        <p class="eng-title">Extended Collaboration</p>
+                                        <p>Ongoing. Embedded as a technical partner — most useful when you're building something novel and need consistent depth over time.</p>
+                                    </div>
+                                    <div class="engagement-item mentorship">
+                                        <p class="eng-title">Mentorship</p>
+                                        <p> I am actively helping undergrad & master's students to break into AI and level up within the field through strategic, no-fluff guidance. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth.</p>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CTA -->
+                                <div class="services-cta-row">
+                                    <p>If this sounds like a fit, send a short note describing what you're building.</p>
+                                    <a href="mailto:mihansari.jh@gmail.com" class="service-cta-btn">Get in touch &rarr;</a>
+                                </div>
+
+                            </td>
                         </tr>
                     </table>
-
-
                 </div>
                     <!-- Community tab -->
                     <div id="Mentorship" class="tab-content">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                    <p> 
-                                        I am actively helping undergraduate and master’s students break into AI or level up within the field through strategic, no-fluff guidance.  
-                                        I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
-                                        and development. If you are interested, send an introductory email that includes:
-                                    </p>
+                                    <p> I am actively Helping technical undergrad & master's students break into AI or level up within the field through strategic, no-fluff guidance. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
+                                        and development. If you are interested, send an introductory email that includes:</p>
                                     <ul>
                                         <li>A brief introduction about yourself.</li>
                                         <li>Your academic background and areas of interest.</li>
