@@ -172,11 +172,10 @@
                 <div class="tabs">
                     <!-- Tab Headers -->
                     <div class="tab-headers">
-                        <!-- <button class="tab-header active" onclick="switchTab(event, 'research')">Research</button> -->
-                        <button class="tab-header" onclick="switchTab(event, 'other')">Explorations</button>
-                        <button class="tab-header" onclick="switchTab(event, 'Selected')">Selected Projects</button>
+                        <button class="tab-header active" onclick="switchTab(event, 'case-studies')">Case Studies</button>
                         <button class="tab-header" onclick="switchTab(event, 'blogs')">Writing</button>
                         <button class="tab-header" onclick="switchTab(event, 'Bookshelf')">Bookshelf</button>
+                        <button class="tab-header" onclick="switchTab(event, 'Services')">Services</button>
                         <button class="tab-header" onclick="switchTab(event, 'Mentorship')">Mentorship</button>
                     </div>
 
@@ -224,75 +223,40 @@
                     </div> -->
 
 
-                    <!-- Selected Projects Tab Content -->
-                    <div id="Selected" class="tab-content">
+                    <!-- Case Studies Tab Content -->
+                    <div id="case-studies" class="tab-content active">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                <td style="padding:0%;width:100%;vertical-align:middle">
-                                    <p> I work on problems related to interpretability, with a focus on large language models and multimodal systems.
-                                    </p>
+                                <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                                    <p>I work across interpretability, multimodal systems, and production-grade AI systems.</p>
                                 </td>
                             </tr>
                         </table>
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-                            {% for post in site.posts %} {% for cat in post.categories %} {% if cat == 'selected' %}
-                            <tr>
-                                <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-                                    <img src="{{ site.baseurl }}{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-                                </td>
-                                <td style="padding:2.5%;width:75%;vertical-align:middle">
-                                    <h3>{{post.title}}</h3>
-
-                                    <br> {% if post.website %}
-                                    <a href="{{post.website}}">website</a> / {% endif %} {% if post.paper %}
-                                    <a href="{{post.paper}}">paper</a> / {% endif %} {% if post.patent %}
-                                    <a href="{{post.patent}}">patent</a> / {% endif %} {% if post.patent2 %}
-                                    <a href="{{post.patent2}}">patent #2</a> / {% endif %} {% if post.patent3 %}
-                                    <a href="{{post.patent3}}">patent #3</a> / {% endif %} {% if post.video %}
-                                    <a href="{{post.video}}">video</a> / {% endif %} {% if post.video2 %}
-                                    <a href="{{post.video2}}">video #2</a> / {% endif %} {% if post.code %}
-                                    <a href="{{post.code}}">code</a> / {% endif %} {% if post.poster %}
-                                    <a href="{{post.poster}}">poster</a> / {% endif %} {% if post.slides %}
-                                    <a href="{{post.slides}}">slides</a> / {% endif %}
-                                    <p></p>
-                                    {{ post.excerpt }}
-                                </td>
-                            </tr>
-                            {% endif %} {% endfor %} {% endfor %}
-                        </table>
-                    </div>
-
-                    <!-- Other Projects Tab Content -->
-                    <div id="other" class="tab-content active">
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tr>
-                                <td style="padding:0%;width:100%;vertical-align:middle">
-                                    <p> These include experiments, prototypes, and learning-oriented work.
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-                            {% for post in site.posts %} {% for cat in post.categories %} {% if cat != 'research' and cat != 'selected'  and cat != 'blog' %}
+                            {% for post in site.posts %} {% for cat in post.categories %} {% if cat != 'research' and cat != 'blog' %}
                             <tr>
                                 <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
                                     {% if post.image %}
-                                    <img src="{{ site.baseurl }}{{ post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" /> {% endif %}
+                                    <img src="{{ site.baseurl }}{{ post.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+                                    {% endif %}
                                 </td>
                                 <td style="padding:2.5%;width:75%;vertical-align:middle">
-                                    <h3>{{post.title}}</h3> {{post.authors}}
-                                    <br> {% if post.award %}
-                                    <strong style="color: rgba(243, 63, 63, 0.82);">{{post.award}}</strong>
-                                    <br> {% endif %} {% if post.arxiv %}
-                                    <a href="{{post.arxiv}}">arxiv</a> / {% endif %} {% if post.video %}
-                                    <a href="{{post.video}}">video</a> / {% endif %} {% if post.code %}
-                                    <a href="{{post.code}}">code</a> / {% endif %} {% if post.poster %}
-                                    <a href="{{post.poster}}">poster</a> / {% endif %} {% if post.slides %}
-                                    <a href="{{post.slides}}">slides</a> / {% endif %} {% if post.website %}
-                                    <a href="{{post.website}}">website</a> / {% endif %} {% if post.youtube %}
-                                    <a href="{{post.youtube}}">youtube</a> / {% endif %}
+                                    <h3>{{post.title}}</h3>
+                                    {{post.authors}}
+                                    <br>
+                                    {% if post.award %}<strong style="color: rgba(243, 63, 63, 0.82);">{{post.award}}</strong><br>{% endif %}
+                                    {% if post.arxiv %}<a href="{{post.arxiv}}">arxiv</a> / {% endif %}
+                                    {% if post.website %}<a href="{{post.website}}">website</a> / {% endif %}
+                                    {% if post.paper %}<a href="{{post.paper}}">paper</a> / {% endif %}
+                                    {% if post.patent %}<a href="{{post.patent}}">patent</a> / {% endif %}
+                                    {% if post.patent2 %}<a href="{{post.patent2}}">patent #2</a> / {% endif %}
+                                    {% if post.patent3 %}<a href="{{post.patent3}}">patent #3</a> / {% endif %}
+                                    {% if post.video %}<a href="{{post.video}}">video</a> / {% endif %}
+                                    {% if post.video2 %}<a href="{{post.video2}}">video #2</a> / {% endif %}
+                                    {% if post.code %}<a href="{{post.code}}">code</a> / {% endif %}
+                                    {% if post.poster %}<a href="{{post.poster}}">poster</a> / {% endif %}
+                                    {% if post.slides %}<a href="{{post.slides}}">slides</a> / {% endif %}
+                                    {% if post.youtube %}<a href="{{post.youtube}}">youtube</a> / {% endif %}
                                     <p></p>
                                     {{ post.excerpt }}
                                 </td>
@@ -368,15 +332,27 @@
                             </td>
                         </tr>
                     </table>
-                </div>                
+                </div>               
+                
+                <!-- Services tab -->
+                <div id="Services" class="tab-content">
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tr>
+                                <p> Need someone to architect retrieval, build LLM systems, and write the evals pipeline? Bring me in for focused sprints or long-haul collaborations. </p>
+                        </tr>
+                    </table>
+
 
                 </div>
                     <!-- Community tab -->
                     <div id="Mentorship" class="tab-content">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                    <p> I am actively mentoring undergraduate and master’s students in LLMs and Vision, and I look forward to supporting more learners. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
-                                        and development. If you are interested, send an introductory email that includes:</p>
+                                    <p> 
+                                        I am actively helping undergraduate and master’s students break into AI or level up within the field through strategic, no-fluff guidance.  
+                                        I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
+                                        and development. If you are interested, send an introductory email that includes:
+                                    </p>
                                     <ul>
                                         <li>A brief introduction about yourself.</li>
                                         <li>Your academic background and areas of interest.</li>
