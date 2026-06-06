@@ -180,7 +180,7 @@
 
         .engagement-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
             margin-top: 4px;
         }
@@ -190,6 +190,10 @@
             background: #f8f8f8;
             border-radius: 5px;
             border-left: 2.5px solid #3498db;
+        }
+
+        .engagement-item.mentorship {
+            border-left-color: #2eaa72;
         }
 
         .engagement-item .eng-title {
@@ -289,7 +293,6 @@
                         <button class="tab-header" onclick="switchTab(event, 'blogs')">Writing</button>
                         <button class="tab-header" onclick="switchTab(event, 'Bookshelf')">Bookshelf</button>
                         <button class="tab-header" onclick="switchTab(event, 'Services')">Collaboration</button>
-                        <!-- <button class="tab-header" onclick="switchTab(event, 'Mentorship')">Mentorship</button> -->
                     </div>
 
                     <!-- Research Tab Content -->
@@ -495,9 +498,8 @@
                                     </div>
                                     <div class="engagement-item mentorship">
                                         <p class="eng-title">Mentorship</p>
-                                        <p> I am actively helping undergrad & master's students to break into AI and level up within the field through strategic, no-fluff guidance. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth.</p>
+                                        <p>I am actively helping undergrad & master's students to break into AI through strategic, no-fluff guidance. I especially encourage students with diverse backgrounds to reach out.</p>
                                     </div>
-
                                 </div>
 
 
@@ -511,21 +513,6 @@
                         </tr>
                     </table>
                 </div>
-                    <!-- Community tab -->
-                    <div id="Mentorship" class="tab-content">
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tr>
-                                    <p> I am actively Helping technical undergrad & master's students break into AI or level up within the field through strategic, no-fluff guidance. I especially encourage students with diverse backgrounds to connect and explore opportunities for growth
-                                        and development. If you are interested, send an introductory email that includes:</p>
-                                    <ul>
-                                        <li>A brief introduction about yourself.</li>
-                                        <li>Your academic background and areas of interest.</li>
-                                        <li>Your CV (optional but preferred).</li>
-                                    </ul>
-                            </tr>
-                        </table>
-                    </div>
-
                     <script>
                         function switchTab(evt, tabName) {
                             // Hide all tab contents
