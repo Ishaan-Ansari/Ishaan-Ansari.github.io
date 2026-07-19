@@ -188,7 +188,7 @@
         .service-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0 48px;
+            gap: 0 32px;
             margin-bottom: 8px;
         }
 
@@ -216,7 +216,7 @@
         .engagement-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
+            gap: 12px;
             margin-top: 4px;
         }
 
@@ -293,7 +293,7 @@
             <td style="padding:0px">
                 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                     <tr style="padding:0px">
-                        <td style="padding:2.5%;width:60%;vertical-align:middle">
+                        <td style="padding:1.5%;width:60%;vertical-align:middle">
                             <h1>
                 Ishaan Ansari
               </h1>
@@ -335,7 +335,7 @@
                             </p>
                 </div>
                         </td>
-                        <td style="padding:2.5%;width:40%;max-width:40%">
+                        <td style="padding:1.5%;width:40%;max-width:40%">
                             <img style="width:100%;max-width:100%" alt="profile photo" src="/images/avatar.JPG">
                         </td>
                     </tr>
@@ -354,7 +354,7 @@
                     <!-- <div id="research" class="tab-content active">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                                <td style="padding:0% 3.5%;width:100%;vertical-align:middle">
                                     <p>
                                         My research interests lie at the intersection of multimodal systems in vision and language domains, with a focus on enhancing reasoning and decision-making capabilities. I am particularly interested in addressing the challenges faced by large multi-modal
                                         models across discriminative, generative, and perceptual understanding tasks, especially in Out-Of-Distribution (OOD) and federated scenarios.
@@ -366,11 +366,11 @@
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             {% for post in site.posts %} {% for cat in post.categories %} {% if cat == 'research' %}
                             <tr>
-                                <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+                                <td style="padding:1.5%;width:25%;vertical-align:middle;min-width:120px">
                                     {% if post.image %}
                                     <img src="{{ site.baseurl }}{{ post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" /> {% endif %}
                                 </td>
-                                <td style="padding:2.5%;width:75%;vertical-align:middle">
+                                <td style="padding:1.5%;width:75%;vertical-align:middle">
                                     <h3>{{post.title}}</h3>
                                     <br> {{post.authors}}
                                     <br>
@@ -398,7 +398,7 @@
                     <div id="case-studies" class="tab-content active">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
-                                <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                                <td style="padding:0% 1.5%;width:100%;vertical-align:middle">
                                     <p>I work across interpretability, multimodal AI, and production-grade systems.</p>
                                 </td>
                             </tr>
@@ -406,12 +406,12 @@
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             {% for post in site.posts %} {% for cat in post.categories %} {% if cat != 'research' and cat != 'blog' %}
                             <tr>
-                                <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+                                <td style="padding:1.5%;width:25%;vertical-align:middle;min-width:120px">
                                     {% if post.image %}
                                     <img src="{{ site.baseurl }}{{ post.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
                                     {% endif %}
                                 </td>
-                                <td style="padding:2.5%;width:75%;vertical-align:middle">
+                                <td style="padding:1.5%;width:75%;vertical-align:middle">
                                     <h3>{{post.title}}</h3>
                                     {{post.authors}}
                                     <br>
@@ -440,9 +440,9 @@
                 <div id="blogs" class="tab-content">
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                     <tr>
-                        <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                        <td style="padding:0% 1.5%;width:100%;vertical-align:middle">
                         <p>
-                            I like sharing my thoughts on a variety of topics on my <a href="https://substack.com/@kerneleye">Substack blog</a>. Below are all my blog posts.
+                            I like sharing my thoughts on a variety of topics on my <a href="https://gradientascent101.substack.com/?utm_campaign=profile_chips">Substack blog</a>. Below are all my blog posts.
                         </p>
                         </td>
                     </tr>
@@ -452,7 +452,7 @@
                     {% for cat in post.categories %}
                     {% if cat == 'blog' %}
                     <tr>
-                        <td style="padding:2.5%;width:100%;vertical-align:middle">
+                        <td style="padding:1.5%;width:100%;vertical-align:middle">
                         <div class="blog-post">
                             <div class="blog-title">
                             <a href="{{post.link}}" target="_blank" style="text-decoration: none; color: #2c3e50;">{{post.title}}</a>
@@ -473,7 +473,7 @@
                 <div id="Bookshelf" class="tab-content">
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tr>
-                            <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                            <td style="padding:0% 1.5%;width:100%;vertical-align:middle">
                                 
                                 <p style="color: #666; margin-bottom: 50px;">Books that shaped how I think</p>
 
@@ -512,7 +512,7 @@
                 <div id="Services" class="tab-content">
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tr>
-                            <td style="padding:0% 2.5%;width:100%;vertical-align:middle">
+                            <td style="padding:0% 1.5%;width:100%;vertical-align:middle">
 
                                 <p style="color: #666; margin-bottom: 50px;">
                                     Need someone to architect retrieval, build LLM systems, and write the evals pipeline? 
