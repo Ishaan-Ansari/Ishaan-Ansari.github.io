@@ -258,6 +258,41 @@
             font-size: 15px;
         }
 
+        .highlights-list {
+            list-style: none;
+            margin: 0;
+            padding: 0 1.5%;
+        }
+
+        .highlight-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 16px;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .highlight-item:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-date {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .highlight-title {
+            margin: 0 0 4px;
+            color: #2c3e50;
+            font-size: 17px;
+        }
+
+        .highlight-description {
+            margin: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+
         .service-cta-btn {
             display: inline-block;
             padding: 10px 26px;
@@ -280,6 +315,11 @@
             .service-grid,
             .engagement-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .highlight-item {
+                grid-template-columns: 1fr;
+                gap: 4px;
             }
         }
 
@@ -344,10 +384,11 @@
                 <div class="tabs">
                     <!-- Tab Headers -->
                     <div class="tab-headers">
-                        <button class="tab-header active" onclick="switchTab(event, 'case-studies')">Case Studies</button>
+                        <!-- <button class="tab-header" onclick="switchTab(event, 'case-studies')">Case Studies</button> -->
+                        <button class="tab-header active" onclick="switchTab(event, 'highlights')">Highlights</button>
                         <button class="tab-header" onclick="switchTab(event, 'blogs')">Writing</button>
                         <button class="tab-header" onclick="switchTab(event, 'Bookshelf')">Bookshelf</button>
-                        <button class="tab-header" onclick="switchTab(event, 'Services')">Collaboration</button>
+                        <!-- <button class="tab-header" onclick="switchTab(event, 'Services')">Collaboration</button> -->
                     </div>
 
                     <!-- Research Tab Content -->
@@ -394,7 +435,7 @@
                     </div> -->
 
 
-                    <!-- Case Studies Tab Content -->
+                    <!-- Case Studies Tab Content
                     <div id="case-studies" class="tab-content active">
                         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                             <tr>
@@ -434,6 +475,25 @@
                             </tr>
                             {% endif %} {% endfor %} {% endfor %}
                         </table>
+                    </div>
+                    -->
+
+                    <div id="highlights" class="tab-content active">
+                        <ul class="highlights-list">
+                            {% for update in site.data.updates %}
+                            <li class="highlight-item">
+                                <time class="highlight-date" datetime="{{ update.date | date: '%Y-%m-%d' }}">{{ update.date | date: "%b %Y" }}</time>
+                                <div>
+                                    {% if update.title %}
+                                    <p class="highlight-title">
+                                        {% if update.link %}<a href="{{ update.link }}" target="_blank" rel="noopener noreferrer">{{ update.title }}</a>{% else %}{{ update.title }}{% endif %}
+                                    </p>
+                                    {% endif %}
+                                    {% if update.description %}<p class="highlight-description">{{ update.description }}</p>{% endif %}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
 
                 <!-- Blogs Tab Content -->
@@ -509,7 +569,7 @@
                 </div>               
                 
                 <!-- Services tab ---->
-                <div id="Services" class="tab-content">
+                <!-- <div id="Services" class="tab-content">
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tr>
                             <td style="padding:0% 1.5%;width:100%;vertical-align:middle">
@@ -570,7 +630,7 @@
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div> -->
                     <script>
                         function switchTab(evt, tabName) {
                             // Hide all tab contents
